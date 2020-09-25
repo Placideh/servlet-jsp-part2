@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>DemoApp2</display-name>
+  <servlet>
+  	<servlet-name>abc</servlet-name>
+  	<servlet-class>com.placide.DemoApp2.MyServlet</servlet-class>
+  	<init-param>
+  		<param-name>name</param-name>
+  		<param-value>Uwizeye</param-value>
+  	</init-param>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>abc</servlet-name>
+  	<url-pattern>/home</url-pattern>
+  </servlet-mapping>
+  <!--Sevletcontext and Selvetconfig  -->
+  <!--  this are used to get the initial value of the servlets of the application-->
+  <!--  ServletContext it is used 
+  when we are having so much servlets that is going to be using that initialized value
+  
+  however we use sevlet Config for only when it is for a specific sevlet-->
+  <context-param>
+	  <param-name>name</param-name>
+	  <param-value>Placid</param-value>
+  </context-param>
+  <context-param>
+	  <param-name>phone</param-name>
+	  <param-value>Infinix</param-value>
+  </context-param>
+  
+</web-app>
